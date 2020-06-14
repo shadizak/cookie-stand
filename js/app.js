@@ -127,7 +127,88 @@ var Seattle = {
   Dubai.render();
 
 
+  var Paris = {
+    name:"Paris",
+    minCust: 20, 
+    maxCust: 38,
+    avgCookie: 2.3,
+    cookiesPerH:  function(minValur,maxValue){
+        var arrayOfCookie = [];
+        for(var i = 0 ; i < 14 ; i++){
+             var randomNumberOfClients = generateRandomNumberOfClients(minValur,maxValue)
+           arrayOfCookie[i] = randomNumberOfClients * Seattle.avgCookie
+        } 
+        this.cookiesPerH = arrayOfCookie
+    },
+     render: function(){
+        var parentElement = document.getElementById("Report");
+
+        var artical  = document.createElement('artical');
+        parentElement.appendChild(artical)
+
+        var h2 = document.createElement('h2');
+        h2.textContent = this.name;
+        artical.appendChild(h2);
+
+        var ul = document.createElement('ul');
+        artical.appendChild(ul);
+        
+        for (var i=0;i<13;i++){
+            var li = document.createElement('li');
+
+            li.textContent = timeArray[i]+': '+ this.cookiesPerH[i]+' cookies';
+            ul.appendChild(li);
+        }
+
+     }
+  }; 
+
   
+  Paris.cookiesPerH(Paris.minCust, Paris.maxCust);
+  Paris.render();
+
+
+  var Lima = {
+    name:"Lima",
+    minCust: 2, 
+    maxCust: 16,
+    avgCookie: 4.6,
+    cookiesPerH:  function(minValur,maxValue){
+        var arrayOfCookie = [];
+        for(var i = 0 ; i < 14 ; i++){
+             var randomNumberOfClients = generateRandomNumberOfClients(minValur,maxValue)
+           arrayOfCookie[i] = randomNumberOfClients * Seattle.avgCookie
+        } 
+        this.cookiesPerH = arrayOfCookie
+    },
+     render: function(){
+        var parentElement = document.getElementById("Report");
+
+        var artical  = document.createElement('artical');
+        parentElement.appendChild(artical)
+
+        var h2 = document.createElement('h2');
+        h2.textContent = this.name;
+        artical.appendChild(h2);
+
+        var ul = document.createElement('ul');
+        artical.appendChild(ul);
+        
+        for (var i=0;i<13;i++){
+            var li = document.createElement('li');
+
+            li.textContent = timeArray[i]+': '+ this.cookiesPerH[i]+' cookies';
+            ul.appendChild(li);
+        }
+
+     }
+  }; 
+
+  
+  Lima.cookiesPerH(Lima.minCust, Lima.maxCust);
+  Lima.render();
+
+
  function getTime(){
      for (var i =6 ; i <= 19;i++){
          if(i<=12){
@@ -138,6 +219,7 @@ var Seattle = {
 
      }
   } 
+
 function generateRandomNumberOfClients (minValur,maxValue){
 var randomVal = Math.random();
 return Math.floor(Math.random() * (maxValue - minValur + 1)) + minValur; 
