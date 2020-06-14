@@ -85,6 +85,48 @@ var Seattle = {
   Tokyo.cookiesPerH(Tokyo.minCust, Tokyo.maxCust);
   Tokyo.render();
 
+
+  var Dubai = {
+    name:"Dubai",
+    minCust: 3, 
+    maxCust: 24,
+    avgCookie: 1.2,
+    cookiesPerH:  function(minValur,maxValue){
+        var arrayOfCookie = [];
+        for(var i = 0 ; i < 14 ; i++){
+             var randomNumberOfClients = generateRandomNumberOfClients(minValur,maxValue)
+           arrayOfCookie[i] = randomNumberOfClients * Seattle.avgCookie
+        } 
+        this.cookiesPerH = arrayOfCookie
+    },
+     render: function(){
+        var parentElement = document.getElementById("Report");
+
+        var artical  = document.createElement('artical');
+        parentElement.appendChild(artical)
+
+        var h2 = document.createElement('h2');
+        h2.textContent = this.name;
+        artical.appendChild(h2);
+
+        var ul = document.createElement('ul');
+        artical.appendChild(ul);
+        
+        for (var i=0;i<13;i++){
+            var li = document.createElement('li');
+
+            li.textContent = timeArray[i]+': '+ this.cookiesPerH[i]+' cookies';
+            ul.appendChild(li);
+        }
+
+     }
+  }; 
+
+  
+  Dubai.cookiesPerH(Dubai.minCust, Dubai.maxCust);
+  Dubai.render();
+
+
   
  function getTime(){
      for (var i =6 ; i <= 19;i++){
