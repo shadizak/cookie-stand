@@ -1,1 +1,1 @@
-## the Salmon Cookies project
+## The Salmon Cookies project
