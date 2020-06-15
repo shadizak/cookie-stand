@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+  } 
+   
+  table {
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0, 6px, 12px, rgba(0,0,0,0,23), 0 10px 40px rgba(0, 0, 0, 0.19);
+    margin: 15px auto 10px;
+    max-height: 100vh;
+    padding: 13px 10px 20px;
+    width: 85vw;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: white;
+    margin-bottom: 30px;
+  }
+  table th {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9em;
+    font-weight: 600;
+    padding: 10px;
+  }
+  h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  table td {
+    border: 3px solid white;
+    padding:15px;
+  }
+  table tr:nth-child(even) {
+    background: gray; 
+  }
+  table tr:hover{
+      border: 3px solid black;
+      background: white;
+      color: black;
+  }
+  table thead tr:hover{
+      background: black;
+      color: white;
+  }
+  table th:hover {
+      border: 3px solid black;
+      color: white;
+  }
+  table tr:hover td {
+      border: 3px solid black;
+  }
+  table tr:nth-last-child(1) td:nth-last-child(1) {
+      background-color: burlywood;
+    border: solid 7px gold;
+    color: black;
+  }
+  #sales-graph {
+    background: darkgrey;
+    height: auto;
+    padding-top: 30px;
+  }
+  #add-shop {
+    background: gray;
+    height:auto;
+  }
+  .active {
+    color:gray;
+  }
+   
+   
