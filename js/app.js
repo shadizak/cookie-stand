@@ -3,6 +3,7 @@
  
 var timeArray = [];
 getTime();
+var total = 0;
 var Seattle = {
     name:"Seattle",
     minCust: 23, 
@@ -10,9 +11,11 @@ var Seattle = {
     avgCookie: 6.3,
     cookiesPerH:  function(minValur,maxValue){
         var arrayOfCookie = [];
+        total = 0
         for(var i = 0 ; i < 14 ; i++){
              var randomNumberOfClients = generateRandomNumberOfClients(minValur,maxValue)
-           arrayOfCookie[i] = randomNumberOfClients * Seattle.avgCookie
+           arrayOfCookie[i] = Math.floor(randomNumberOfClients * Seattle.avgCookie)
+           total = total + arrayOfCookie[i]
         } 
         this.cookiesPerH = arrayOfCookie
     },
@@ -29,12 +32,16 @@ var Seattle = {
         var ul = document.createElement('ul');
         artical.appendChild(ul);
         
-        for (var i=0;i<13;i++){
+        for (var i=0;i<=13;i++){
             var li = document.createElement('li');
 
             li.textContent = timeArray[i]+': '+ this.cookiesPerH[i]+' cookies';
             ul.appendChild(li);
         }
+        var li = document.createElement('li');
+
+        li.textContent = 'Total: ' +total+' cookies';
+        ul.appendChild(li);
 
      }
   }; 
@@ -52,9 +59,11 @@ var Seattle = {
     avgCookie: 1.2,
     cookiesPerH:  function(minValur,maxValue){
         var arrayOfCookie = [];
+        total = 0
         for(var i = 0 ; i < 14 ; i++){
              var randomNumberOfClients = generateRandomNumberOfClients(minValur,maxValue)
-           arrayOfCookie[i] = randomNumberOfClients * Seattle.avgCookie
+           arrayOfCookie[i] = Math.floor(randomNumberOfClients * Seattle.avgCookie)
+           total = total + arrayOfCookie[i]
         } 
         this.cookiesPerH = arrayOfCookie
     },
@@ -71,13 +80,16 @@ var Seattle = {
         var ul = document.createElement('ul');
         artical.appendChild(ul);
         
-        for (var i=0;i<13;i++){
+        for (var i=0;i<=13;i++){
             var li = document.createElement('li');
 
             li.textContent = timeArray[i]+': '+ this.cookiesPerH[i]+' cookies';
             ul.appendChild(li);
         }
+        var li = document.createElement('li');
 
+        li.textContent = 'Total: ' +total+' cookies';
+        ul.appendChild(li);
      }
   }; 
 
@@ -93,9 +105,11 @@ var Seattle = {
     avgCookie: 1.2,
     cookiesPerH:  function(minValur,maxValue){
         var arrayOfCookie = [];
+        total = 0
         for(var i = 0 ; i < 14 ; i++){
              var randomNumberOfClients = generateRandomNumberOfClients(minValur,maxValue)
-           arrayOfCookie[i] = randomNumberOfClients * Seattle.avgCookie
+           arrayOfCookie[i] = Math.floor(randomNumberOfClients * Seattle.avgCookie)
+           total = total + arrayOfCookie[i]
         } 
         this.cookiesPerH = arrayOfCookie
     },
@@ -112,13 +126,16 @@ var Seattle = {
         var ul = document.createElement('ul');
         artical.appendChild(ul);
         
-        for (var i=0;i<13;i++){
+        for (var i=0;i<=13;i++){
             var li = document.createElement('li');
 
             li.textContent = timeArray[i]+': '+ this.cookiesPerH[i]+' cookies';
             ul.appendChild(li);
         }
+        var li = document.createElement('li');
 
+        li.textContent = 'Total: ' +total+' cookies';
+        ul.appendChild(li);
      }
   }; 
 
@@ -134,9 +151,11 @@ var Seattle = {
     avgCookie: 2.3,
     cookiesPerH:  function(minValur,maxValue){
         var arrayOfCookie = [];
+        total = 0
         for(var i = 0 ; i < 14 ; i++){
              var randomNumberOfClients = generateRandomNumberOfClients(minValur,maxValue)
-           arrayOfCookie[i] = randomNumberOfClients * Seattle.avgCookie
+           arrayOfCookie[i] = Math.floor(randomNumberOfClients * Seattle.avgCookie)
+           total = total + arrayOfCookie[i]
         } 
         this.cookiesPerH = arrayOfCookie
     },
@@ -153,13 +172,16 @@ var Seattle = {
         var ul = document.createElement('ul');
         artical.appendChild(ul);
         
-        for (var i=0;i<13;i++){
+        for (var i=0;i<=13;i++){
             var li = document.createElement('li');
 
             li.textContent = timeArray[i]+': '+ this.cookiesPerH[i]+' cookies';
             ul.appendChild(li);
         }
+        var li = document.createElement('li');
 
+        li.textContent = 'Total: ' +total+' cookies';
+        ul.appendChild(li);
      }
   }; 
 
@@ -173,12 +195,16 @@ var Seattle = {
     minCust: 2, 
     maxCust: 16,
     avgCookie: 4.6,
+    totla:0,
     cookiesPerH:  function(minValur,maxValue){
         var arrayOfCookie = [];
+        total = 0;
         for(var i = 0 ; i < 14 ; i++){
              var randomNumberOfClients = generateRandomNumberOfClients(minValur,maxValue)
-           arrayOfCookie[i] = randomNumberOfClients * Seattle.avgCookie
+           arrayOfCookie[i] = Math.floor(randomNumberOfClients * Seattle.avgCookie)
+           total = total + arrayOfCookie[i]
         } 
+        console.log(this.totla)
         this.cookiesPerH = arrayOfCookie
     },
      render: function(){
@@ -194,12 +220,17 @@ var Seattle = {
         var ul = document.createElement('ul');
         artical.appendChild(ul);
         
-        for (var i=0;i<13;i++){
+        for (var i=0;i<=13;i++){
             var li = document.createElement('li');
 
             li.textContent = timeArray[i]+': '+ this.cookiesPerH[i]+' cookies';
             ul.appendChild(li);
         }
+
+        var li = document.createElement('li');
+
+        li.textContent = 'Total: ' +total+' cookies';
+        ul.appendChild(li);
 
      }
   }; 
