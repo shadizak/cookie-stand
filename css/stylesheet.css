@@ -7,8 +7,7 @@
   table {
     background-color: black;
     border-radius: 15px;
-    box-shadow: 0, 6px, 12px, rgba(0,0,0,0,23), 0 10px 40px rgba(0, 0, 0, 0.19);
-    margin: 15px auto 10px;
+     margin: 15px auto 10px;
     max-height: 100vh;
     padding: 13px 10px 20px;
     width: 85vw;
@@ -18,6 +17,7 @@
     color: white;
     margin-bottom: 30px;
   }
+
   table th {
     font-family: Arial, Helvetica, sans-serif;
     font-size: .9em;
@@ -45,6 +45,7 @@
       background: black;
       color: white;
   }
+
   table th:hover {
       border: 3px solid black;
       color: white;
@@ -62,12 +63,92 @@
     height: auto;
     padding-top: 30px;
   }
-  #add-shop {
-    background: gray;
-    height:auto;
-  }
-  .active {
-    color:gray;
-  }
    
+  #topBar {
+    background-color: rgb(140, 181, 244);
+    color: white;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    padding: 10px 0px 0px 0px;
+     position: fixed;
+    width: 100%;
+    height: 100px;
+  } 
+  
+  img {
+    height: 100%
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  h1,h2,h3 {
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  p {
+    font-family: 'Helvetica', sans-serif;
+  }
+  nav li {
+    display: inline-block;
+     align-content: center;
+     padding: 15px 20px 0px 10px;
+    height: 35px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+  }
+  
+  nav li:hover {
+    color: rgb(0, 70, 89);
+  }
+  
+  nav h1 {
+    float: left;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    font-size: 46px;
+    margin: 10px 20px 20px 10px;
+  }
+  main {
+    color: black;
+    background-color: white;
+    text-align: center;
+    width: 97%;
+    padding: 20px 0px 40px 0px;
+    margin: 0px 20px;
+    border: grey solid 1px;
+    } 
    
+    main tr:hover {
+      background-color: rgb(219, 242, 255)
+    }
+    #banner {
+      padding: 128px 0px 4px 0px;
+      height: 400px;
+      width: 97%;
+      margin: 0px 20px 0px 20px;
+    }
+    
+    #banner img {
+      height: 200px;
+       
+       
+    }
+    
+    #price ,p {
+      font-family: 'Georgia', serif;
+    font-size: 20px;
+    }
+    .storeItem {
+      height: 300px;
+      text-align: center;
+      display: inline-block;
+    } 
+    .footer{
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      height: 80px;
+      background-color: rgb(140, 181, 244);
+    }
