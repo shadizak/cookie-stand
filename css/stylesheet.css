@@ -146,7 +146,7 @@
       display: inline-block;
     } 
     .footer{
-      position: fixed;
+      position: sticky;
       bottom: 0px;
       width: 100%;
       height: 80px;
